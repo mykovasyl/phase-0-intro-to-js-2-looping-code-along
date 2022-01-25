@@ -1,17 +1,20 @@
+let cards = [];
 
-function writeCards(birthdayNames, eventType) {
-    let birthdayMessages = [];
-    for (let i = 0; i < birthdayNames.length; i++) {
-        birthdayMessages.push(`Thank you, ${birthdayNames[i]}, for the wonderful ${eventType} gift!`); 
-
+function writeCards(names, eventName) {
+    for(let i = 0; i < names.length; i++) {
+        const newMessage = `Thank you, ${names[i]}, for the wonderful ${eventName} gift!`;
+        cards.push(newMessage);
     }
-    return birthdayMessages;
+
+    return cards;
 }
 
-function countDown(integer) {
-    while (integer >= 0) {
-        console.log(integer)
-        integer--;
+function countDown(anyNumber) {
+    let i = 0;
+    while (i <= anyNumber) {
+        console.log(anyNumber - i);
+        //console.log(anyNumber);
+        i++;
     }
-    return integer;
 }
+
